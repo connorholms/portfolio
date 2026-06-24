@@ -1,6 +1,10 @@
-export default function About() {
+interface AboutProps {
+  id: string;
+}
+
+export default function About({ id }: AboutProps) {
   return (
-    <div>
+    <section id={id}>
       <div>
         Hi, I'm Connor and I am a software engineer. I am a self-taught software
         engineer with 5 years of experience ranging in full-stack engineering,
@@ -9,6 +13,6 @@ export default function About() {
         user and the value that I can provide them. I'm eagerly awaiting my next
         challenge and look forward to the next set of problems to solve
       </div>
-    </div>
+    </section>
   );
 }

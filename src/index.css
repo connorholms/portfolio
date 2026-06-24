@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: black;
+    color: white;
+  }
+  body {
+    width: 100%;
+    max-width: var(--size-7xl);
+    margin-inline: auto; 
+    padding-inline: 1rem;
+    padding-block: 2rem;
+  }
+
+  @media (min-width: 640px) {
+  }
+  @media (min-width: 1024px) {
+
+  }
+}

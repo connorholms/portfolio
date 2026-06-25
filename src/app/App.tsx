@@ -24,8 +24,7 @@ export default function App() {
   return (
     <div className="flex flex-col h-screen shrink-0">
       <Navbar onNavigate={handleScroll}></Navbar>
-      <main className="flex-1 overflow-y-auto">
-        <hr />
+      <main className="flex-1 overflow-y-auto no-scrollbar">
         <About onRef={(el) => (sectionRefs.current["about"] = el)} />
         <hr />
         <Projects onRef={(el) => (sectionRefs.current["projects"] = el)} />

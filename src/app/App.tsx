@@ -22,9 +22,9 @@ export default function App() {
     }
   };
   return (
-    <div className="flex flex-col h-screen shrink-0">
+    <div className="flex flex-col h-screen shrink-0 items-center w-screen">
       <Navbar onNavigate={handleScroll}></Navbar>
-      <main className="flex-1 overflow-y-auto no-scrollbar">
+      <main className="flex-1 overflow-y-auto no-scrollbar ">
         <About onRef={(el) => (sectionRefs.current["about"] = el)} />
         <hr />
         <Projects onRef={(el) => (sectionRefs.current["projects"] = el)} />

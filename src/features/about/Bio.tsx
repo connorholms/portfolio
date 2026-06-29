@@ -1,7 +1,7 @@
 export default function Bio() {
   return (
     <span className="w-1/2 flex items-center">
-      <div className="text-black bg-cream/80 flex flex-col items-center justify-center mx-4 py-10">
+      <div className="text-black bg-box-background/80 flex flex-col items-center justify-center mx-4 py-10">
         <h2 className="text-4xl">Hi, I'm Connor Holmstrom!</h2>
         <p className="w-3/4 mt-10">
           I am a self-taught software engineer with 5 years of experience

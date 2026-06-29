@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-moss: #343b1d;
-  --color-eggplant: #4d3148;
-  --color-cream: #e8e7d5;
+  --color-box-background: #e8e7d5;
 }
 
 @layer base {

@@ -1,11 +1,20 @@
+import ProjectExample from "./ProjectExample";
+import { myProjects } from "./projects.constants";
+
 interface ProjectProps {
   onRef: (element: HTMLElement | null) => void;
 }
 
 export default function Projects({ onRef }: ProjectProps) {
   return (
-    <section ref={onRef}>
-      <div>Place where projects will go</div>
+    <section ref={onRef} className="grid grid-cols-2 grid-row-1 gap-4">
+      {myProjects.map((project) => {
+        return (
+          <div key={project.id}>
+            <ProjectExample project={project} />
+          </div>
+        );
+      })}
     </section>
   );
 }

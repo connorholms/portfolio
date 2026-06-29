@@ -46,18 +46,15 @@ const workingKnowledge = [
 
 export default function Skills() {
   return (
-    <section>
-      <div className="w-full max-w-6xl mx-auto p-6 my-10 bg-box-background/80 rounded-xl">
+    <section className="flex flex-col justify-center">
+      <div className="w-full max-w-6xl mx-auto p-6 my-10 bg-box-background/70 rounded-xl">
         <SkillsIconGrid
           name="Core Tech Stack"
           technologies={coreTechnologies}
         />
       </div>
-      <div className="w-full max-w-6xl mx-auto p-6 my-10 bg-box-background/80 rounded-xl">
-        <SkillsIconGrid
-          name="Intermediate / Working Knowledge"
-          technologies={workingKnowledge}
-        />
+      <div className="w-full max-w-6xl mx-auto p-6 my-10 bg-box-background/70 rounded-xl">
+        <SkillsIconGrid name="Familiar With" technologies={workingKnowledge} />
       </div>
     </section>
   );

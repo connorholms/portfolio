@@ -7,7 +7,10 @@ interface ProjectProps {
 
 export default function Projects({ onRef }: ProjectProps) {
   return (
-    <section ref={onRef} className="grid grid-cols-2 grid-row-1 gap-4">
+    <section
+      ref={onRef}
+      className="grid grid-cols-2 grid-row-1 gap-4 max-w-6xl mx-auto"
+    >
       {myProjects.map((project) => {
         return (
           <div key={project.id}>

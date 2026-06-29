@@ -7,7 +7,10 @@ interface AboutProps {
 
 export default function About({ onRef }: AboutProps) {
   return (
-    <section ref={onRef} className="flex h-200">
+    <section
+      ref={onRef}
+      className="flex h-200 w-full max-w-6xl justify-center mx-auto"
+    >
       <div className="flex flex-col w-1/2 justify-center items-center">
         <Bio />
         <ContactLinks />

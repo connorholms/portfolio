@@ -4,6 +4,7 @@ import About from "../features/about/About";
 import type { AppSection } from "../types/homePage.types";
 import Projects from "../features/projects/Projects";
 import Contact from "../features/contact/Contact";
+import Skills from "../features/skills/Skills";
 
 export default function App() {
   const sectionRefs = useRef<Record<AppSection, HTMLElement | null>>({
@@ -27,7 +28,7 @@ export default function App() {
       <Navbar onNavigate={handleScroll}></Navbar>
       <main className="flex-1 overflow-y-auto no-scrollbar ">
         <About onRef={(el) => (sectionRefs.current["about"] = el)} />
-        <hr />
+        <Skills />
         <Projects onRef={(el) => (sectionRefs.current["projects"] = el)} />
         <Contact onRef={(el) => (sectionRefs.current["about"] = el)} />
       </main>

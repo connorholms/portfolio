@@ -6,7 +6,7 @@ interface NavbarProps {
 
 export default function Navbar({ onNavigate }: NavbarProps) {
   return (
-    <div className="bg-black w-full">
+    <div className="bg-black w-full sticky top-0 left-0 right-0 z-50 w-full">
       <div className="flex justify-center items-center h-16">
         <span>
           <div>Connor Holmstrom =&gt; Full Stack Engineer || </div>

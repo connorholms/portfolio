@@ -3,6 +3,7 @@ import Navbar from "../components/layout/Navbar";
 import About from "../features/about/About";
 import type { AppSection } from "../types/homePage.types";
 import Projects from "../features/projects/Projects";
+import Contact from "../features/contact/Contact";
 
 export default function App() {
   const sectionRefs = useRef<Record<AppSection, HTMLElement | null>>({
@@ -28,6 +29,7 @@ export default function App() {
         <About onRef={(el) => (sectionRefs.current["about"] = el)} />
         <hr />
         <Projects onRef={(el) => (sectionRefs.current["projects"] = el)} />
+        <Contact onRef={(el) => (sectionRefs.current["about"] = el)} />
       </main>
     </div>
   );

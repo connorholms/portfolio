@@ -11,7 +11,7 @@ export default function SkillsIconGrid({
 }: SkillIconsGridProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+      <h2 className="text-2xl font-bold mb-6 text-center text-box-background">
         {name}
       </h2>
 
@@ -21,7 +21,7 @@ export default function SkillsIconGrid({
             key={tech.name}
             className="flex flex-col items-center justify-center p-4"
           >
-            <div className="w-12 h-12 flex items-center justify-center mb-3">
+            <div className="w-12 h-12 flex items-center justify-center mb-3 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
               <img
                 src={tech.src}
                 alt={`${tech.name} logo`}
@@ -29,7 +29,7 @@ export default function SkillsIconGrid({
                 loading="lazy"
               />
             </div>
-            <span className="text-sm font-medium text-gray-600 text-center line-clamp-1">
+            <span className="text-sm font-medium text-box-background text-center line-clamp-1">
               {tech.name}
             </span>
           </div>

@@ -6,7 +6,7 @@ interface NavbarProps {
 
 export default function Navbar({ onNavigate }: NavbarProps) {
   return (
-    <div className="bg-black w-full sticky top-0 left-0 right-0 z-50 w-full">
+    <div className="bg-olive-800 w-full sticky top-0 left-0 right-0 z-50 w-full">
       <div className="flex justify-center items-center h-16">
         <span>
           <div>Connor Holmstrom =&gt; Full Stack Engineer || </div>
@@ -17,7 +17,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           <button onClick={() => onNavigate("contact")}>Contact</button>
         </nav>
       </div>
-      <hr />
     </div>
   );
 }

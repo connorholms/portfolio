@@ -4,6 +4,8 @@ export interface ProjectInfo {
   body: string;
   type: string;
   stack: string[];
+  url: string | null;
+  image: string;
 }
 
 export type Projects = ProjectInfo[];

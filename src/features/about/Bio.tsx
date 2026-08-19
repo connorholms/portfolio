@@ -7,9 +7,10 @@ export default function Bio() {
           I am a self-taught software engineer with 5 years of experience
           ranging in full-stack engineering, client success and product roles. I
           treat engineering like it's a product role and have a unique approach
-          to development, focusing on the user and the value that I can provide
-          them. I'm eagerly awaiting my next challenge and look forward to the
-          next set of problems to solve.
+          to development, focusing on making sure the product actual has real
+          value delivered to the end user rather than just completing the work
+          that's assigned to me. I'm eagerly awaiting my next challenge and look
+          forward to the next set of problems to solve.
         </p>
       </div>
     </span>

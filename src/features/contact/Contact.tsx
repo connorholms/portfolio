@@ -1,5 +1,9 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { GITHUBPROFILE, LINKEDINPROFILE } from "../../constants/contact";
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  ResumeIcon,
+} from "@radix-ui/react-icons";
+import { GITHUBPROFILE, LINKEDINPROFILE, RESUME } from "../../constants/contact";
 
 interface ContactProps {
   onRef: (element: HTMLElement | null) => void;
@@ -36,6 +40,14 @@ export default function Contact({ onRef }: ContactProps) {
           aria-label="LinkedIn"
         >
           <LinkedInLogoIcon className={iconClass} />
+        </a>
+        <a
+          href={RESUME}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Resume"
+        >
+          <ResumeIcon className={iconClass} />
         </a>
       </div>
     </footer>

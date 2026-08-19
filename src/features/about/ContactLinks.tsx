@@ -1,5 +1,9 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { GITHUBPROFILE, LINKEDINPROFILE } from "../../constants/contact";
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  ResumeIcon,
+} from "@radix-ui/react-icons";
+import { GITHUBPROFILE, LINKEDINPROFILE, RESUME } from "../../constants/contact";
 
 const iconSize = "w-12 h-12";
 const iconColor = "text-box-background/80";
@@ -12,13 +16,23 @@ export default function ContactLinks() {
   return (
     <div className="flex gap-4 mt-4">
       <span>
-        <a href={GITHUBPROFILE}>
+        <a href={GITHUBPROFILE} target="_blank" rel="noopener noreferrer">
           <GitHubLogoIcon className={iconClass} />
         </a>
       </span>
       <span>
-        <a href={LINKEDINPROFILE}>
+        <a href={LINKEDINPROFILE} target="_blank" rel="noopener noreferrer">
           <LinkedInLogoIcon className={iconClass} />
+        </a>
+      </span>
+      <span>
+        <a
+          href={RESUME}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Resume"
+        >
+          <ResumeIcon className={iconClass} />
         </a>
       </span>
     </div>

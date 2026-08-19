@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { TechLogos } from "../../assets/logos";
 import type { ProjectInfo } from "./projects.types";
 
@@ -8,8 +9,25 @@ interface ProjectHighlightProps {
 export default function ProjectHighlight({ project }: ProjectHighlightProps) {
   return (
     <article className="mt-10 py-6 rounded-lg bg-box-background text-black">
-      <h2 className="mx-10 pb-6 text-4xl text-bold">{project.title}</h2>
+      <div className="mx-10 flex flex-wrap items-center justify-between gap-4 pb-6">
+        <h2 className="text-4xl text-bold">{project.title}</h2>
+        <span className="shrink-0 rounded-full bg-olive-800 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-box-background">
+          {project.type}
+        </span>
+      </div>
       <p className="mx-10">{project.body}</p>
+
+      {project.url && (
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-10 mt-4 inline-flex items-center gap-1 text-olive-800 hover:underline"
+        >
+          View project
+          <ExternalLinkIcon />
+        </a>
+      )}
 
       <div className="mx-10 mt-6 flex items-center justify-center gap-10">
         {project.stack.map((tech) => (

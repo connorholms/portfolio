@@ -30,7 +30,7 @@ export default function App() {
         <About onRef={(el) => (sectionRefs.current["about"] = el)} />
         <Skills />
         <Projects onRef={(el) => (sectionRefs.current["projects"] = el)} />
-        <Contact onRef={(el) => (sectionRefs.current["about"] = el)} />
+        <Contact onRef={(el) => (sectionRefs.current["contact"] = el)} />
       </main>
     </div>
   );

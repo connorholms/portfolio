@@ -9,7 +9,7 @@ export default function About({ onRef }: AboutProps) {
   return (
     <section
       ref={onRef}
-      className="flex h-200 w-full max-w-6xl justify-center mx-auto"
+      className="flex h-200 w-full max-w-6xl justify-center mx-auto mt-30 mb-10"
     >
       <div className="flex flex-col w-1/2 justify-center items-center">
         <Bio />

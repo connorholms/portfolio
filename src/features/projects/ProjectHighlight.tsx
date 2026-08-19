@@ -30,24 +30,27 @@ export default function ProjectHighlight({ project }: ProjectHighlightProps) {
       )}
 
       <div className="mx-10 mt-6 flex items-center justify-center gap-10">
-        {project.stack.map((tech) => (
-          <div
-            key={tech}
-            className="flex flex-col items-center justify-center p-2"
-          >
-            <div className="w-20 h-20 flex items-center justify-center mb-2 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
-              <img
-                src={TechLogos[tech as keyof typeof TechLogos]}
-                alt={`${tech} logo`}
-                className="w-full h-full object-contain"
-                loading="lazy"
-              />
+        {project.stack.map((tech) => {
+          const logo = TechLogos[tech as keyof typeof TechLogos];
+          return (
+            <div
+              key={tech}
+              className="flex flex-col items-center justify-center p-2"
+            >
+              <div className="w-20 h-20 flex items-center justify-center mb-2 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
+                <img
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <span className="text-s font-medium text-black text-center">
+                {logo.name}
+              </span>
             </div>
-            <span className="text-s font-medium text-black text-center">
-              {tech}
-            </span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </article>
   );

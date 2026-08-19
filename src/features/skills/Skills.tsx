@@ -2,28 +2,28 @@ import { TechLogos } from "../../assets/logos";
 import SkillsIconGrid from "./skillsIcons";
 
 const coreTechnologies = [
-  { name: "Angular", src: TechLogos.Angular },
-  { name: "CSS3", src: TechLogos.CSS3 },
-  { name: "Docker", src: TechLogos.Docker },
-  { name: "HTML5", src: TechLogos.HTML5 },
-  { name: "JavaScript", src: TechLogos.JavaScript },
-  { name: "Next.js", src: TechLogos.NextJS },
-  { name: "Node.js", src: TechLogos.NodeJS },
-  { name: "PostgreSQL", src: TechLogos.PostgreSQL },
-  { name: "Python", src: TechLogos.Python },
-  { name: "React", src: TechLogos.React },
-  { name: "Redis", src: TechLogos.Redis },
-  { name: "Tailwind CSS", src: TechLogos.Tailwind },
+  TechLogos.angular,
+  TechLogos.css3,
+  TechLogos.docker,
+  TechLogos.html5,
+  TechLogos.javascript,
+  TechLogos.nextjs,
+  TechLogos.nodejs,
+  TechLogos.postgresql,
+  TechLogos.python,
+  TechLogos.react,
+  TechLogos.redis,
+  TechLogos.tailwind,
 ];
 
 const workingKnowledge = [
-  { name: "AWS", src: TechLogos.AWS },
-  { name: "Azure", src: TechLogos.Azure },
-  { name: "Go", src: TechLogos.Go },
-  { name: "Java", src: TechLogos.Java },
-  { name: "MongoDB", src: TechLogos.MongoDB },
-  { name: "Vue.js", src: TechLogos.Vue },
-  { name: "Svelte", src: TechLogos.Svelte },
+  TechLogos.aws,
+  TechLogos.azure,
+  TechLogos.go,
+  TechLogos.java,
+  TechLogos.mongodb,
+  TechLogos.vue,
+  TechLogos.svelte,
 ];
 
 export default function Skills() {

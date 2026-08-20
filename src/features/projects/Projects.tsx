@@ -18,7 +18,7 @@ export default function Projects({ onRef }: ProjectProps) {
   return (
     <section ref={onRef} className="max-w-6xl mx-auto my-20">
       <h2 className="w-fit mx-auto mb-10 whitespace-nowrap text-center text-3xl text-black bg-box-background rounded-xl px-8 py-3">
-        Projects I Have Been Working On
+        Projects I've worked on
       </h2>
       <div className="grid grid-cols-4 grid-row-1 gap-4">
         {myProjects.map((project) => {

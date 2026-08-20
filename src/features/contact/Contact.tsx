@@ -1,16 +1,18 @@
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
-  ResumeIcon,
+  ReaderIcon,
 } from "@radix-ui/react-icons";
+import IconLink from "../../components/ui/IconLink";
+import Tooltip from "../../components/ui/Tooltip";
 import { GITHUBPROFILE, LINKEDINPROFILE, RESUME } from "../../constants/contact";
 
 interface ContactProps {
   onRef: (element: HTMLElement | null) => void;
 }
 
-const iconClass =
-  "w-14 h-14 text-box-background transition-all duration-300 ease-out hover:text-[#cade46] hover:scale-110 hover:-translate-y-0.5";
+const iconSize = "w-14 h-14";
+const iconColor = "text-box-background";
 
 export default function Contact({ onRef }: ContactProps) {
   return (
@@ -25,30 +27,29 @@ export default function Contact({ onRef }: ContactProps) {
         software world!
       </p>
       <div className="flex items-center gap-8">
-        <a
+        <IconLink
           href={GITHUBPROFILE}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <GitHubLogoIcon className={iconClass} />
-        </a>
-        <a
+          label="GitHub"
+          icon={GitHubLogoIcon}
+          size={iconSize}
+          color={iconColor}
+        />
+        <IconLink
           href={LINKEDINPROFILE}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <LinkedInLogoIcon className={iconClass} />
-        </a>
-        <a
-          href={RESUME}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Resume"
-        >
-          <ResumeIcon className={iconClass} />
-        </a>
+          label="LinkedIn"
+          icon={LinkedInLogoIcon}
+          size={iconSize}
+          color={iconColor}
+        />
+        <Tooltip label="Check out my resume">
+          <IconLink
+            href={RESUME}
+            label="Resume"
+            icon={ReaderIcon}
+            size={iconSize}
+            color={iconColor}
+          />
+        </Tooltip>
       </div>
     </footer>
   );

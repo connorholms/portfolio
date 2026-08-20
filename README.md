@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Connor Holmstrom — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Connor Holmstrom, a full-stack software engineer. Built as a single-page React application showcasing background, technical skills, and selected projects, with a lightweight in-page navigation experience.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **[React 19](https://react.dev/)** + **[TypeScript](https://www.typescriptlang.org/)** — component-based UI with static typing
+- **[Vite](https://vite.dev/)** — dev server and build tooling
+- **[Tailwind CSS v4](https://tailwindcss.com/)** — utility-first styling via `@tailwindcss/vite`
+- **[Radix Icons](https://www.radix-ui.com/icons)** — iconography for contact/social links
+- **[ESLint](https://eslint.org/)** + **typescript-eslint** — linting
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the dev server with hot module replacement:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### Build
+
+Type-check and produce a production build:
+
+```bash
+npm run build
+```
+
+### Preview
+
+Serve the production build locally:
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── app/                  # Root App component and global styles
+├── assets/               # Images, resume, and technology logos
+├── components/
+│   ├── layout/           # Navbar and other layout shells
+│   └── ui/               # Reusable primitives (IconLink, Tooltip)
+├── constants/            # Shared static values (e.g. contact links)
+├── features/
+│   ├── about/             # Bio and contact link section
+│   ├── contact/            # Footer / "let's connect" section
+│   ├── projects/           # Project list, cards, and highlight detail view
+│   └── skills/             # Core and familiar technology grids
+├── types/                # Shared/app-wide TypeScript types
+├── index.css             # Tailwind entry point and global styles
+└── main.tsx              # Application entry point
+```
+
+The app follows a **feature-based organization**: each section of the page (About, Skills, Projects, Contact) lives in its own directory under `src/features`, colocated with the types and constants it needs. Shared layout and UI primitives live under `src/components`.
+
+## Sections
+
+The site is a single scrolling page with in-page navigation handled by scroll-into-view refs (see [App.tsx](src/app/App.tsx)):
+
+- **About** — introduction, bio, and links to GitHub, LinkedIn, and resume
+- **Skills** — core tech stack and technologies the author is familiar with, rendered as icon grids
+- **Projects** — a selectable grid of professional and personal projects with a detail panel showing description, role type, and stack used
+- **Contact** — closing call-to-action with links to GitHub, LinkedIn, and resume
+
+## Deployment
+
+This is a static site produced by `npm run build`, output to `dist/`, and can be deployed to any static hosting provider (e.g. Vercel, Netlify, GitHub Pages, Cloudflare Pages).
+
+## License
+
+Personal project — all rights reserved.

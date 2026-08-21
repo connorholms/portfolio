@@ -1,5 +1,6 @@
 import Bio from "./Bio";
 import ContactLinks from "./ContactLinks";
+import headshotUrl from "src/assets/headshot.jpg";
 
 interface AboutProps {
   onRef: (element: HTMLElement | null) => void;
@@ -17,7 +18,7 @@ export default function About({ onRef }: AboutProps) {
       </div>
       <span className="flex block w-1/2 items-center justify-start">
         <img
-          src="src/assets/headshot.jpg"
+          src={`${headshotUrl}`}
           alt="Connor Holmstrom Headshot"
           className="h-150 object-cover"
         />
